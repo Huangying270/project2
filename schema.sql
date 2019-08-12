@@ -5,9 +5,10 @@ USE users_DB;
 CREATE TABLE user_login(
     id INTEGER(10)
     AUTO_INCREMENT NOT NULL,
+    faceEagan LONGBLOB,
 username VARCHAR
     (20) NOT NULL,
-password VARCHAR
+mainPassword VARCHAR
     (100) NOT NULL,
 PRIMARY KEY
     (id)
