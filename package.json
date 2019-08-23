@@ -1,0 +1,26 @@
+{
+  "name": "face-detection-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "face-api.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebDevSimplified/Face-Detection-JavaScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebDevSimplified/Face-Detection-JavaScript/issues"
+  },
+  "homepage": "https://github.com/WebDevSimplified/Face-Detection-JavaScript#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "require": "^2.4.20"
+  }
+}
