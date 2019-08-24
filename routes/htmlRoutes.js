@@ -6,7 +6,7 @@ var path = require("path");
 // ===============================================================================
 
 module.exports = function (app) {
-    // app.get('/index.html', (req, res) => res.sendFile(path.join(viewsDir, 'index.html')))
+     app.get('/sign', (req, res) => res.sendFile(path.join(__dirname,"../signup.html")))
 
     // ---------------------------------------------------------------------------
 
@@ -19,7 +19,13 @@ module.exports = function (app) {
     app.get("/", function (req, res) {
         res.sendFile(path.join(__dirname, "../index.html"));
     });
-    app.get("./models", function (req, res) {
+    app.get("/models", function (req, res) {
         res.sendFile(path.join(__dirname, "../models"));
+    });
+    app.get("/sign", function (req, res) {
+        res.sendFile(path.join(__dirname, "../signup.html"));
+    });
+    app.get("/scriptSaveImage.js", function (req, res) {
+        res.sendFile(path.join(__dirname, "../scriptSaveImage.js"));
     });
 };
