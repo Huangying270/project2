@@ -57,13 +57,16 @@ function checkUser(face) {
   // if face in users show personal page
   // else show not face after a while
   if (labels.indexOf(face) == -1) {
-    console.log('not')
+    $('#login-display').html('not recognized')
     shots = 8
   } else {
-    console.log('recognized ||' + lastLabel + ' || ' + shots)
+    $('#login-display').html('recognized || '+ face + " || " + shots)
     if (face === lastLabel) {
       shots -= 1
-      if (shots === 0) { console.log('welcome ' + face) }
+      if (shots === 0) {
+         $('#login-display').html('welcome ' + face) 
+         window.open("/personal-page.html","_self")
+        }
     } else {
       lastLabel = face
       shots = 8

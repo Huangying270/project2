@@ -13,9 +13,7 @@ module.exports = function (app) {
             cb(null, "1.jpg")
         }
     })
-
     const upload = multer({ storage: storage })
-
     app.post('/profile', upload.single('avatar'), function (req, res, next) {
         const dir = req.body.username.toString()
         var users = [];

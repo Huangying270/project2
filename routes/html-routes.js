@@ -10,6 +10,7 @@ module.exports = function (app) {
     app.get("/face-api.min.js", (req, res) => res.sendFile(path.join(__dirname, "../public/js/face-api.min.js")));
     app.get("/script.js", (req, res) => res.sendFile(path.join(__dirname, "../public/js/script.js")));
     app.get("/models", (req, res) => res.sendFile(path.join(__dirname, "../public/models")));
+    app.get("/models", (req, res) => res.sendFile(path.join(__dirname, "../public/personal-page.html")));
     app.get("/usernames", (req, res) => {
         var users = [];
         fs.readdirSync("labeled_images/").forEach(file => { users.push(file.toString()) });
