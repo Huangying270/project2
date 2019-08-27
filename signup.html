@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
     <style>
         body {
             margin: 0;
@@ -25,12 +24,12 @@
 </head>
 
 <body>
-    <!-- <video id="video" width="720" height="560" autoplay muted></video> -->
     <form action="/profile" method="post" enctype="multipart/form-data">
         <input type="file" name="avatar" />
-        <input type="text" id="username" placeholder="username" name = 'username'>
+        <input type="text" id="username" placeholder="username" name='username'>
         <button type="submit">Submit</button>
     </form>
+    <!-- need to add something so that when this happens an entry is added to a mysql database -->
 </body>
 
 </html>

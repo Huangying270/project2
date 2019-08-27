@@ -28,4 +28,7 @@ module.exports = function (app) {
     app.get("/scriptSaveImage.js", function (req, res) {
         res.sendFile(path.join(__dirname, "../scriptSaveImage.js"));
     });
+    app.get("/webcam.js", function (req, res) {
+        res.sendFile(path.join(__dirname, "../webcam.js"));
+    });
 };

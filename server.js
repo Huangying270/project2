@@ -42,6 +42,7 @@ const fs = require('fs-extra')
 const upload = multer({ storage: storage })
 
 app.post('/profile', upload.single('avatar'), function (req, res, next) {
+  // <!-- need to add something so that when this happens an entry is added to a mysql database -->
   console.log(req.body.username)
   dir = req.body.username.toString()
   mkdirp(path.join(__dirname, './labeled_images', dir), function (err) {
@@ -60,7 +61,9 @@ app.post('/profile', upload.single('avatar'), function (req, res, next) {
 
 // ==========================================================================
 
-
+fs.readdirSync("labeled_images/").forEach(file => {
+  console.log(file);
+});
 
 
 
